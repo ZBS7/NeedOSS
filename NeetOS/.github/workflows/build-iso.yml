@@ -1,0 +1,74 @@
+name: Build NeetOs ISO
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    
+    - name: Free disk space
+      run: |
+        sudo rm -rf /usr/share/dotnet
+        sudo rm -rf /opt/ghc
+        sudo rm -rf "/usr/local/share/boost"
+        sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+        sudo apt-get clean
+    
+    - name: Set up Arch Linux container
+      run: docker pull archlinux:latest
+    
+    - name: Build ISO in Arch container
+      run: |
+        docker run --privileged -v ${{ github.workspace }}:/workspace archlinux:latest /bin/bash -c "
+          set -e
+          cd /workspace
+          pacman -Syu --noconfirm
+          pacman -S --noconfirm archiso git base-devel
+          mkdir -p work out
+          cp -r /usr/share/archiso/configs/releng work/neetos
+          cp profiledef.sh work/neetos/ || true
+          cp packages.x86_64 work/neetos/ || true
+          cp pacman.conf work/neetos/ || true
+          if [ -d airootfs ]; then cp -r airootfs/* work/neetos/airootfs/ 2>/dev/null || true; fi
+          if [ -d configs ]; then
+            mkdir -p work/neetos/airootfs/etc/skel/.config
+            if [ -f configs/hyprland/hyprland.conf ]; then
+              mkdir -p work/neetos/airootfs/etc/skel/.config/hypr
+              cp configs/hyprland/hyprland.conf work/neetos/airootfs/etc/skel/.config/hypr/
+            fi
+            if [ -d configs/waybar ]; then
+              mkdir -p work/neetos/airootfs/etc/skel/.config/waybar
+              cp configs/waybar/* work/neetos/airootfs/etc/skel/.config/waybar/ 2>/dev/null || true
+            fi
+            if [ -f configs/kitty/kitty.conf ]; then
+              mkdir -p work/neetos/airootfs/etc/skel/.config/kitty
+              cp configs/kitty/kitty.conf work/neetos/airootfs/etc/skel/.config/kitty/
+            fi
+            if [ -f configs/rofi/config.rasi ]; then
+              mkdir -p work/neetos/airootfs/etc/skel/.config/rofi
+              cp configs/rofi/config.rasi work/neetos/airootfs/etc/skel/.config/rofi/
+            fi
+            if [ -f configs/sddm/sddm.conf ]; then
+              mkdir -p work/neetos/airootfs/etc/sddm.conf.d
+              cp configs/sddm/sddm.conf work/neetos/airootfs/etc/sddm.conf.d/
+            fi
+          fi
+          chmod +x work/neetos/airootfs/usr/local/bin/* 2>/dev/null || true
+          chmod +x work/neetos/airootfs/root/.automated_script.sh 2>/dev/null || true
+          cd work/neetos
+          mkarchiso -v -w ./work -o /workspace/out ./
+        "
+    
+    - name: Upload ISO artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: neetos-iso
+        path: out/*.iso
+        retention-days: 7
