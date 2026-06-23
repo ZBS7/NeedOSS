@@ -1,0 +1,171 @@
+# Base System
+base
+base-devel
+linux
+linux-firmware
+linux-headers
+intel-ucode
+amd-ucode
+
+# Boot and System
+grub
+efibootmgr
+os-prober
+systemd
+systemd-sysvcompat
+
+# Networking
+networkmanager
+network-manager-applet
+nm-connection-editor
+wireless_tools
+wpa_supplicant
+openssh
+wget
+curl
+
+# Filesystem
+btrfs-progs
+dosfstools
+exfatprogs
+ntfs-3g
+gvfs
+gvfs-mtp
+udisks2
+
+# Display Server
+xorg
+xorg-server
+xorg-xinit
+wayland
+xwayland
+
+# Hyprland and Window Manager
+hyprland
+xdg-desktop-portal-hyprland
+qt5-wayland
+qt6-wayland
+grim
+slurp
+swappy
+wl-clipboard
+cliphist
+
+# Display Manager
+sddm
+qt5-graphicaleffects
+qt5-quickcontrols2
+qt5-svg
+
+# Audio
+pipewire
+pipewire-alsa
+pipewire-pulse
+pipewire-jack
+wireplumber
+pavucontrol
+alsa-utils
+
+# Fonts
+ttf-dejavu
+ttf-liberation
+noto-fonts
+noto-fonts-emoji
+noto-fonts-cjk
+ttf-jetbrains-mono
+ttf-firacode-nerd
+
+# Terminal
+kitty
+zsh
+zsh-completions
+zsh-syntax-highlighting
+zsh-autosuggestions
+
+# File Manager
+thunar
+thunar-archive-plugin
+thunar-volman
+file-roller
+tumbler
+
+# Status Bar
+waybar
+dunst
+rofi
+wofi
+
+# Theme and Appearance
+gtk3
+gtk4
+papirus-icon-theme
+arc-gtk-theme
+breeze
+breeze-gtk
+lxappearance
+
+# Browser
+firefox
+
+# Development
+git
+neovim
+visual-studio-code-bin
+python
+python-pip
+nodejs
+npm
+
+# System Monitor
+btop
+htop
+neofetch
+
+# Utilities
+feh
+mpv
+imv
+imagemagick
+ffmpeg
+p7zip
+unzip
+zip
+rsync
+nano
+
+# Gaming
+steam
+wine
+wine-mono
+wine-gecko
+winetricks
+lutris
+gamemode
+lib32-gamemode
+
+# VM Support
+virtualbox-guest-utils
+open-vm-tools
+xf86-video-vmware
+
+# Display Compositor Effects
+wlroots
+swaybg
+swayidle
+swaylock
+
+# Additional Tools
+polkit
+polkit-gnome
+gnome-keyring
+xdg-user-dirs
+xdg-utils
+man-db
+man-pages
+neofetch
+fastfetch
+
+# Package Management
+pacman-contrib
+reflector
+flatpak

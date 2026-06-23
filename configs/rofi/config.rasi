@@ -1,0 +1,77 @@
+/* NeetOs Rofi Theme - Cyberpunk */
+
+* {
+    bg: #0a0a0fcc;
+    bg-alt: #1a1a1fff;
+    fg: #e0e0e0;
+    fg-alt: #888888;
+    accent: #00ff99;
+    accent-alt: #00ccff;
+    
+    background-color: transparent;
+    text-color: @fg;
+    
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    background-color: @bg;
+    border: 2px;
+    border-color: @accent;
+    border-radius: 12px;
+    width: 600px;
+    padding: 20px;
+}
+
+mainbox {
+    children: [inputbar, listview];
+}
+
+inputbar {
+    children: [prompt, entry];
+    padding: 12px;
+    background-color: @bg-alt;
+    border-radius: 8px;
+    margin: 0 0 16px 0;
+}
+
+prompt {
+    text-color: @accent;
+    padding: 0 12px 0 0;
+    font: "JetBrains Mono Bold 14";
+}
+
+entry {
+    placeholder: "Search...";
+    placeholder-color: @fg-alt;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    scrollbar: false;
+    spacing: 4px;
+}
+
+element {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+element selected {
+    background-color: @bg-alt;
+    border: 2px;
+    border-color: @accent;
+    text-color: @accent;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+element-icon {
+    size: 32px;
+    padding: 0 12px 0 0;
+}

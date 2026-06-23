@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# NeetOs First Boot Setup Script
+
+set -e
+
+USER_HOME="/home/neet"
+
+echo "[*] Setting up NeetOs..."
+
+# Install Oh My Zsh for neet user
+if [ ! -d "$USER_HOME/.oh-my-zsh" ]; then
+    echo "[*] Installing Oh My Zsh..."
+    sudo -u neet sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+    
+    # Install Powerlevel10k
+    echo "[*] Installing Powerlevel10k theme..."
+    sudo -u neet git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$USER_HOME/.oh-my-zsh/custom/themes/powerlevel10k"
+    
+    # Install zsh plugins
+    echo "[*] Installing zsh plugins..."
+    sudo -u neet git clone https://github.com/zsh-users/zsh-autosuggestions "$USER_HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+    sudo -u neet git clone https://github.com/zsh-users/zsh-syntax-highlighting "$USER_HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+fi
+
+# Set zsh as default shell
+if [ "$(getent passwd neet | cut -d: -f7)" != "/bin/zsh" ]; then
+    echo "[*] Setting zsh as default shell..."
+    chsh -s /bin/zsh neet
+fi
+
+# Enable services
+echo "[*] Enabling system services..."
+systemctl enable NetworkManager
+systemctl enable sddm
+systemctl enable bluetooth
+
+# Setup VirtualBox Guest Additions
+if lspci | grep -i virtualbox &>/dev/null; then
+    echo "[*] VirtualBox detected, enabling guest services..."
+    systemctl enable vboxservice
+fi
+
+# Setup VMware tools
+if lspci | grep -i vmware &>/dev/null; then
+    echo "[*] VMware detected, enabling vmware services..."
+    systemctl enable vmtoolsd
+    systemctl enable vmware-vmblock-fuse
+fi
+
+echo "[✓] NeetOs setup complete!"

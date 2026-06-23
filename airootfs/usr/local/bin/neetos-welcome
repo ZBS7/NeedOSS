@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# NeetOs Welcome Script
+
+clear
+
+cat << "EOF"
+    _   __          __  ____     
+   / | / /__  ___  / /_/ __ \____
+  /  |/ / _ \/ _ \/ __/ / / / __ \
+ / /|  /  __/  __/ /_/ /_/ / /_/ /
+/_/ |_/\___/\___/\__/\____/\____/ 
+
+    Welcome to NeetOs!
+    Cyberpunk Linux Experience
+    
+EOF
+
+echo "========================================"
+echo "  System Information"
+echo "========================================"
+fastfetch
+
+echo ""
+echo "========================================"
+echo "  Quick Tips"
+echo "========================================"
+echo "  Super + Return    - Open Terminal"
+echo "  Super + D         - Application Launcher"
+echo "  Super + E         - File Manager"
+echo "  Super + B         - Web Browser"
+echo "  Super + Q         - Close Window"
+echo ""
+echo "  Default Login: neet / neet"
+echo "  Root Password: root"
+echo ""
+echo "========================================"

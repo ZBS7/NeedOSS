@@ -1,0 +1,236 @@
+
+╔════════════════════════════════════════════════════════════════════════╗
+║                                                                        ║
+║   ███╗   ██╗███████╗███████╗████████╗ ██████╗ ███████╗               ║
+║   ████╗  ██║██╔════╝██╔════╝╚══██╔══╝██╔═══██╗██╔════╝               ║
+║   ██╔██╗ ██║█████╗  █████╗     ██║   ██║   ██║███████╗               ║
+║   ██║╚██╗██║██╔══╝  ██╔══╝     ██║   ██║   ██║╚════██║               ║
+║   ██║ ╚████║███████╗███████╗   ██║   ╚██████╔╝███████║               ║
+║   ╚═╝  ╚═══╝╚══════╝╚══════╝   ╚═╝    ╚═════╝ ╚══════╝               ║
+║                                                                        ║
+║              Welcome to NeetOs Build System v1.0!                     ║
+║          Modern Linux Distribution with Cyberpunk Theme               ║
+║                                                                        ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+
+🎉 CONGRATULATIONS! / ПОЗДРАВЛЯЮ!
+
+You have successfully downloaded the NeetOs project!
+Ты успешно загрузил проект NeetOs!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📖 CHOOSE YOUR LANGUAGE / ВЫБЕРИ ЯЗЫК
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  🇬🇧 ENGLISH:        Read ► START_HERE.md
+  
+  🇷🇺 РУССКИЙ:        Читай ► ЧИТАЙ_МЕНЯ.txt
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚡ QUICK START (FOR EXPERIENCED USERS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+If you're on Arch Linux and know what you're doing:
+
+    sudo pacman -S archiso git base-devel
+    chmod +x build.sh
+    sudo ./build.sh
+
+Wait 20-40 minutes → Get ISO in ./out/ → Boot in VirtualBox → Enjoy!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 ALL DOCUMENTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+GETTING STARTED:
+  ► START_HERE.md               Main entry point (English)
+  ► ЧИТАЙ_МЕНЯ.txt              Главный файл (Русский)
+  ► QUICKSTART.md               3-command quick start
+  ► BUILD_INSTRUCTIONS.md       Step-by-step build guide
+
+USING THE SYSTEM:
+  ► INSTALL.md                  Installation in VirtualBox/VMware
+  ► COMMANDS_REFERENCE.md       Command reference guide
+  ► TROUBLESHOOTING.md          Problem solving guide
+
+CUSTOMIZATION:
+  ► CUSTOMIZATION.md            How to customize theme & packages
+  ► PROJECT_STRUCTURE.md        Project architecture
+  ► FILES_SUMMARY.md            Complete file listing
+
+REFERENCE:
+  ► PROJECT_SUMMARY.txt         Complete project summary
+  ► README.md                   Main project documentation
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎯 WHAT IS NEETOS?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NeetOs is a custom Linux distribution based on Arch Linux featuring:
+
+  ✨ Modern Wayland desktop with Hyprland compositor
+  🎨 Cyberpunk-themed UI with neon accents
+  🚀 Optimized for virtual machines (VirtualBox, VMware)
+  🎮 Gaming-ready (Steam, Wine, Lutris pre-installed)
+  👨‍💻 Developer-friendly (VS Code, Git, Node.js, Python)
+  🔧 Fully customizable before build
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+💻 SYSTEM REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TO BUILD:
+  • Arch Linux or Arch-based distro (Manjaro, EndeavourOS)
+  • 20GB+ free disk space
+  • 4GB+ RAM
+  • Internet connection
+  • Packages: archiso, git, base-devel
+
+TO RUN:
+  • VirtualBox 6.0+ or VMware Workstation 15+
+  • 4GB+ RAM (8GB recommended)
+  • 128MB video memory with 3D acceleration
+  • 20GB+ virtual disk
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🚀 BUILD PROCESS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: Check Requirements
+    ./check-requirements.sh
+
+STEP 2: Prepare Project (optional)
+    ./prepare-build.sh
+
+STEP 3: Build ISO
+    sudo ./build.sh
+
+STEP 4: Get Result
+    ISO will be in: ./out/neetos-YYYY.MM.DD-x86_64.iso
+
+Build time: 20-40 minutes (depends on your internet speed)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎮 DEFAULT CREDENTIALS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Username:      neet
+  Password:      neet
+  
+  Root Password: root
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⌨️ KEY BINDINGS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Super + Enter     →  Open Terminal
+  Super + D         →  Application Launcher
+  Super + E         →  File Manager
+  Super + B         →  Web Browser
+  Super + Q         →  Close Window
+  Super + M         →  Exit Hyprland
+  Super + 1-9       →  Switch Workspace
+  Print             →  Screenshot
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📦 PROJECT STRUCTURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+neetos/
+├── 📄 Documentation (10 guides)
+│   ├── START_HERE.md               ← Start here!
+│   ├── ЧИТАЙ_МЕНЯ.txt             ← Начни отсюда!
+│   └── ... (more guides)
+│
+├── 🔧 Build Scripts (4 scripts)
+│   ├── build.sh                   ← Main build script
+│   ├── check-requirements.sh      ← Check your system
+│   └── ... (more scripts)
+│
+├── ⚙️ Configuration Files
+│   ├── profiledef.sh              ← ISO definition
+│   ├── packages.x86_64            ← Package list
+│   └── pacman.conf                ← Pacman config
+│
+├── 🎨 Application Configs
+│   └── configs/
+│       ├── hyprland/              ← Window manager
+│       ├── waybar/                ← Status bar
+│       ├── kitty/                 ← Terminal
+│       └── ... (more configs)
+│
+└── 💾 System Files
+    └── airootfs/                  ← Live system files
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🆘 NEED HELP?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Problem building?       → TROUBLESHOOTING.md
+  Don't understand?       → BUILD_INSTRUCTIONS.md
+  Want to customize?      → CUSTOMIZATION.md
+  Need commands?          → COMMANDS_REFERENCE.md
+  
+  Most answers are in the documentation! 📖
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ QUICK CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Before building, make sure:
+  [ ] You have Arch Linux or Arch-based system
+  [ ] You have 20GB+ free space
+  [ ] You have internet connection
+  [ ] You installed archiso: sudo pacman -S archiso
+  [ ] You read START_HERE.md or ЧИТАЙ_МЕНЯ.txt
+
+Ready? Run:
+  sudo ./build.sh
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎊 NEXT STEPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  1. Read your language guide:
+     English → START_HERE.md
+     Русский → ЧИТАЙ_МЕНЯ.txt
+
+  2. Check requirements:
+     ./check-requirements.sh
+
+  3. Build the ISO:
+     sudo ./build.sh
+
+  4. Test in VM (VirtualBox/VMware)
+
+  5. Customize and rebuild if needed
+
+  6. Share your creation! 🎉
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+                    🚀 Have fun building NeetOs! 🚀
+                  Удачи в создании NeetOs! 🚀
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+              Created with ❤️ • GPL-3.0 License • 2026
+              
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+

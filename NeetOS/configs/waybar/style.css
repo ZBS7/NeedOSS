@@ -1,0 +1,162 @@
+/* NeetOs Waybar Theme - Cyberpunk Style */
+
+* {
+    font-family: "JetBrains Mono", "Font Awesome 6 Free";
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(20, 20, 30, 0.85);
+    border: 2px solid rgba(0, 255, 153, 0.3);
+    border-radius: 12px;
+    color: #ffffff;
+}
+
+/* Workspaces */
+#workspaces {
+    margin: 0 8px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #888888;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 255, 153, 0.1);
+    color: #00ff99;
+}
+
+#workspaces button.active {
+    color: #00ff99;
+    background: rgba(0, 255, 153, 0.2);
+    border-bottom: 2px solid #00ff99;
+}
+
+#workspaces button.urgent {
+    color: #ff0099;
+    background: rgba(255, 0, 153, 0.2);
+}
+
+/* Window title */
+#window {
+    margin: 0 12px;
+    color: #00ccff;
+}
+
+/* Clock */
+#clock {
+    padding: 0 16px;
+    color: #00ff99;
+    font-weight: bold;
+    background: rgba(0, 255, 153, 0.1);
+    border-radius: 8px;
+}
+
+/* System modules */
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#battery,
+#tray {
+    padding: 0 12px;
+    margin: 0 4px;
+    background: rgba(0, 204, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#cpu {
+    color: #00ff99;
+}
+
+#cpu:hover {
+    background: rgba(0, 255, 153, 0.2);
+}
+
+#memory {
+    color: #00ccff;
+}
+
+#memory:hover {
+    background: rgba(0, 204, 255, 0.2);
+}
+
+#network {
+    color: #ffaa00;
+}
+
+#network:hover {
+    background: rgba(255, 170, 0, 0.2);
+}
+
+#network.disconnected {
+    color: #ff0099;
+}
+
+#pulseaudio {
+    color: #ff00ff;
+}
+
+#pulseaudio:hover {
+    background: rgba(255, 0, 255, 0.2);
+}
+
+#pulseaudio.muted {
+    color: #888888;
+}
+
+#battery {
+    color: #00ff99;
+}
+
+#battery.charging {
+    color: #ffaa00;
+}
+
+#battery.warning:not(.charging) {
+    color: #ffaa00;
+    animation: blink 1s linear infinite;
+}
+
+#battery.critical:not(.charging) {
+    color: #ff0099;
+    animation: blink 0.5s linear infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+#tray {
+    padding: 0 8px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    color: #ff0099;
+}
+
+/* Tooltips */
+tooltip {
+    background: rgba(20, 20, 30, 0.95);
+    border: 2px solid rgba(0, 255, 153, 0.3);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+tooltip label {
+    color: #ffffff;
+}
